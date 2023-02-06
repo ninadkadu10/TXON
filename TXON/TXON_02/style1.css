@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+    width: 100%;
+    background:url(calculator12.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 110vh;
+    margin: auto;
+    margin-bottom: 0px;
+}
+
+.content{
+    color: rgb(115, 237, 227);
+}
+
+.cn{
+  transition: 0.3 ease;
+}

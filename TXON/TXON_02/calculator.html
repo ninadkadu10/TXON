@@ -1,0 +1,83 @@
+<html>
+    <title>Calculator</title>
+    <head>
+        <script>
+            function clr()
+            {
+                document.getElementById("box").value="";
+            }
+            function data(val)
+            {
+                document.getElementById("box").value+=val;
+            }
+            
+  
+                  function backspace() {
+    
+                var y  = document.getElementById('box').value;
+                 document.getElementById('box').value=y.substring(0,y.length -1);
+                                       }
+            function  calculate()
+            {
+                var x=document.getElementById("box").value;
+                document.getElementById("box").value=eval(x);
+            }
+  
+</script>
+        <style>
+            input[type="button"]
+            {
+                width: 150px;
+                height: 40px;
+                border-radius: 6px;
+            }
+            
+        </style>
+    <link rel="stylesheet" href="style1.css">
+    </head>
+<body>
+<div class="bg">
+       <center>
+       <div class="content">
+        <h1 style="font-style: oblique;"><b><u>Calculator</u></b></h1>
+       </div>
+           
+        <table>   
+        <tr>
+            <td colspan="4"><input type="text" id="box" placeholder="0"style="width: 600px; height: 40px; color: #000; margin: 7.5px;border-radius: 2px;"></td>
+        </tr>
+        
+        <tr><td><input type="button" onclick="clr()" value="C" style="background-color: #5bc0ce; border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(1)" value="1" style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(2)" value="2"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;"></td>
+            <td><input type="button" onclick="data(3)" value="3"style="background-color:rgb(211, 114, 151); border: 10px; color: whitesmoke;"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="+" onclick="data('+')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" onclick="data(4)" value="4"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(5)" value="5"style="background-color:rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(6)" value="6"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="-" onclick="data('-')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" onclick="data(7)" value="7"style="background-color:rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(8)" value="8"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" onclick="data(9)" value="9"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td> 
+        </tr>
+        <tr>
+            <td><input type="button" value="X" onclick="data('*')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" onclick="data(0)" value="0"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            <td><input type="button" value="." onclick="data('.')" style="background-color:rgb(211, 114, 151); border: 10px; color: whitesmoke;"></td>
+            <td><input type="button" onclick="backspace()" value="del"style="background-color: rgb(211, 114, 151); border: 10px; color: whitesmoke;" ></td>
+            
+        </tr>
+        <tr>
+            <td><input type="button" value="/" onclick="data('/')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" value="(" onclick="data('(')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" value=")" onclick="data(')')"style="background-color: #5bc0ce; color: whitesmoke; border: 10px"  ></td>
+            <td><input type="button" onclick="calculate()" value="=" style="background-color: rgb(40, 143, 95);border: 10px;color: whitesmoke;"></td>
+        </tr>
+        </table>
+    </center>
+</div>
+</html>
